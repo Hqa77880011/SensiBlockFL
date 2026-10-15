@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sensiblockfl"
+version = "0.1.0"
+description = "SensiBlockFL implementation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11,<2", "matplotlib>=3.8,<4", "torch>=2.4,<3", "torchvision>=0.19,<1"]
+
+[project.scripts]
+sensiblockfl-report = "sensiblockfl.common:report"
+sensiblockfl = "sensiblockfl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
